@@ -5,7 +5,7 @@ resource "opensearch_role" "anonymous_backendrole" {
   cluster_permissions = ["cluster_monitor", "cluster_composite_ops_ro"]
 
   index_permissions {
-    index_patterns  = ["gracc.osg.summary*", "xrd-stash*", ".kibana", "gracc.corrections*", "gracc.osg.raw*", "xrd-cache*"]
+    index_patterns  = ["gracc.osg.summary*", "xrd-stash*", ".kibana", "gracc.corrections*", "gracc.osg.raw*", "xrd-cache*", "osdf-summary-*"]
     allowed_actions = ["get", "read", "indices:admin/mappings/get", "indices:data/read/scroll/clear"]
   }
 
